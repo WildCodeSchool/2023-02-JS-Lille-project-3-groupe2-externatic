@@ -15,7 +15,7 @@ export default function ModalOffer() {
   };
 
   function onImageChange(e) {
-    setImages([...e.target.files]);
+    setImages(URL.createObjectURL(e.target.files[0]));
   }
 
   return (
@@ -38,19 +38,20 @@ export default function ModalOffer() {
             </button>
           </div>
           <form className="form-container">
-            <label>
-              Intitulé du poste :
-              <input type="text" placeholder="Développeur Web FullStack ..." />
-            </label>
-            <label>
-              Déposer une image :
-              <input
-                type="file"
-                multiple
-                accept={images}
-                onChange={onImageChange}
-              />
-            </label>
+            <div className="first-second-input">
+              <label>
+                Intitulé du poste :
+                <input
+                  type="text"
+                  placeholder="Développeur Web FullStack ..."
+                />
+              </label>
+              <label>
+                Déposer une image :
+                <input type="file" onChange={onImageChange} />
+                <img src={images} alt="" />
+              </label>
+            </div>
             <label>
               Lieu :
               <input type="text " placeholder="Bordeaux ..." />
@@ -64,6 +65,8 @@ export default function ModalOffer() {
               <textarea
                 type="text"
                 placeholder="Entreprise érigée en 1978, nous offrons ... "
+                cols={70}
+                rows={20}
               />
             </label>
           </form>
