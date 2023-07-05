@@ -1,0 +1,17 @@
+@import "../../Utils.scss";
+.btn-center {
+  display: flex;
+  flex-direction: row-reverse;
+  .btn-loginOut {
+    background-color: $secondary-color-candidate;
+    border-radius: 10px;
+    padding: 1em;
+    margin-top: 0.5em;
+    margin-right: 1em;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 2px 5px $special-color-candidate;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $mono-white;
+  }
+}

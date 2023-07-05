@@ -7,8 +7,8 @@ export default function DefaultLayout() {
     <>
       <header>Externatic</header>
       <Outlet />
-      <Footer type="default" />
       <SliderAutomatic />
+      <Footer type="default" />
     </>
   );
 }
