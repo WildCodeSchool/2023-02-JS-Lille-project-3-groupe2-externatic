@@ -1,5 +1,6 @@
 import React from "react";
 import Modal from "react-modal";
+import { RxCrossCircled } from "react-icons/rx";
 import "./ApplyButton.scss";
 
 export default function ApplyButton() {
@@ -21,15 +22,16 @@ export default function ApplyButton() {
         </button>
       </div>
       <Modal
-        className="modal-new-offer"
+        className="modal-apply"
         isOpen={openModal}
         onRequestClose={handleModalClose}
+        ariaHideApp={false}
       >
         <div className="modal-form">
           <div className="title-modal-button">
-            <h1>Candidature</h1>
+            <h1>Votre candidature</h1>
             <button type="button" onClick={handleModalClose}>
-              X
+              <RxCrossCircled />
             </button>
           </div>
           <form className="form-container">
