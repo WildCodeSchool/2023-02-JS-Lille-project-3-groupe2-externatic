@@ -27,8 +27,9 @@
   position: absolute;
   padding: 3%;
   top: 11vh;
-  width: 50%;
-  height: 80%;
+  left: 32vw;
+  width: 30%;
+  height: 70%;
   background-color: #f5f5f5;
   box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.29);
   border-radius: 8px;
@@ -38,24 +39,62 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    h1 {
+      color: $primary-color-candidate;
+    }
+
+    .btn-close-modal {
+      background: none;
+      border: none;
+      font-size: x-large;
+    }
+
+    .btn-close-modal:hover {
+      color: $special-color-candidate;
+    }
   }
 
   .form-container {
     display: flex;
     flex-direction: column;
 
-    .first-second-input {
-      flex-direction: row;
+    .card-profil {
+      width: 85vw;
+      margin-left: -0.5rem;
+    }
+
+    .first-input,
+    .second-input {
+      text-align: center;
+      align-self: center;
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+
+      label {
+        font-size: large;
+
+        input {
+          padding: 1.5%;
+          width: 70%;
+          margin: 3%;
+          border: none;
+          border-radius: 8px;
+          box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.29);
+        }
+      }
+    }
+
+    button {
+      align-self: flex-end;
+      width: 20%;
+      padding: 1rem;
+      border-radius: 8px;
+      border: none;
+      background-color: #922685;
+      color: $mono-white;
+      font-size: large;
+      @include shadow;
     }
   }
-
-  input {
-    padding: 1%;
-    width: 30%;
-    margin: 2%;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.29);
-  }
 }
-

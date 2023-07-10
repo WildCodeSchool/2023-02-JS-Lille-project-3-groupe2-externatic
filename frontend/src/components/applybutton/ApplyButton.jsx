@@ -1,6 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 import { RxCrossCircled } from "react-icons/rx";
+import ProfilCard from "../cardprofil/ProfilCard";
 import "./ApplyButton.scss";
 
 export default function ApplyButton() {
@@ -30,17 +31,31 @@ export default function ApplyButton() {
         <div className="modal-form">
           <div className="title-modal-button">
             <h1>Votre candidature</h1>
-            <button type="button" onClick={handleModalClose}>
+            <button
+              className="btn-close-modal"
+              type="button"
+              onClick={handleModalClose}
+            >
               <RxCrossCircled />
             </button>
           </div>
           <form className="form-container">
-            <div className="first-second-input">
+            <div className="card-profil">
+              <ProfilCard />
+            </div>
+            <div className="first-input">
               <label>
-                Curriculum Vitae :
+                Curriculum Vitae (CV) :
                 <input type="file" />
               </label>
             </div>
+            <div className="second-input">
+              <label>
+                Lettre de motivation :
+                <input type="file" />
+              </label>
+            </div>
+            <button type="submit">Envoyer</button>
           </form>
         </div>
       </Modal>
