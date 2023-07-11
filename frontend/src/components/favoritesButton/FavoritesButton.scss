@@ -1,0 +1,39 @@
+.favorisButton {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.29);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  .heart {
+    margin-right: 5px;
+    color: $special-color-candidate;
+    margin-left: 10px;
+  }
+
+  .arrow {
+    margin-left: 5px;
+    color: $special-color-candidate;
+    margin-left: 60px;
+  }
+
+  &:hover {
+    background-color: #ccc;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
